@@ -44,7 +44,7 @@ This project is for enabling a wildfire detection system to detect wildfires ear
 
 Gif Example of how to clone Github Repo:
 
-![Git Clone Gif](Git_Clone_Gif.gif)
+<img src="Git_Clone_Gif.gif" width="500" alt="Git Clone Gif">
 
 ## Main Feature Overview
 
@@ -68,7 +68,7 @@ To do custom retraining of the models, modify and rerun fire_detect_inceptionV3_
 
 Gif example of where to find fire datasets:
 
-![Fire Dataset Tutorial](Usage_Gif.gif)
+<img src="Usage_Gif.gif" width="500" alt="Fire Dataset Tutorial">
 
 ## Frequently Asked Questions
 
