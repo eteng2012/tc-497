@@ -56,6 +56,8 @@ The input images from the camera feed are fed into these models, which then outp
 
 ## Architecture Diagram
 
+Below is an architecture diagram of how this project will be used in practice.
+
 ![Architecture Diagram](architecture.png)
 
 ## Usage Examples
