@@ -1,10 +1,10 @@
-# Tensorflow Wildfire Detection System
+# TensorFlame: Tensorflow Wildfire Detection System
 
 ![Wildfire Logo](Wildfire_Logo.png)
 
 ## Description
 
-This project is a program that trains two different machine learning models to identify images on a camera feed. These models classify images based on whether or not the image has a fire in it.
+TensorFlame is a program that trains two different machine learning models to identify images on a camera feed. These models classify images based on whether or not the image has a fire in it.
 
 This project is for enabling a wildfire detection system to detect wildfires early so that firefighters can put out fires quicker. The goal is to decrease the latency between the fire starting and the firefighters arriving, hopefully mitigating the size of the wildfire.
 
@@ -39,7 +39,7 @@ This project is for enabling a wildfire detection system to detect wildfires ear
   ```
 3. Clone the repo:
   ```bash
-  git clone https://github.com/eteng2012/Wildfire-Detector
+  git clone https://github.com/[YOUR_GITHUB_NAME_HERE]/Wildfire-Detector
   ```
 
 Gif Example of how to clone Github Repo:
@@ -62,9 +62,21 @@ Below is an architecture diagram of how this project will be used in practice.
 
 ## Usage Examples
 
-To use this project, use the saved machine learning models and call them in a Python script connected to a Raspberry Pi using model.predict (must be programmed separately). An example of how to do this is in the fire_detect_model_test.py. Screenshot below:
+To use this project, use the saved machine learning models and call them in a Python script connected to a Raspberry Pi using model.predict (must be programmed separately). An example of how to do this is in the fire_detect_model_test.py, as shown below:
 
-![Screenshot of model.predict](model_predict.png)
+```python
+for f in dir_list:
+    img = image.load_img(path+'/'+f, target_size=(224,224))
+    x = image.img_to_array(img)
+    x = np.expand_dims(x, axis=0) / 255
+    classes = model.predict(x)
+    if classes[0][0] > classes[0][1]:
+        nfire = nfire + 1
+        print('fire')
+    else:
+        nnofire = nnofire + 1
+        print('not fire')
+```
 
 To do custom retraining of the models, modify and rerun fire_detect_inceptionV3_model.py and fire_detect_handmade_model.py. Then, you can run fire_detect_model_test.py on a personal dataset to check accuracy.
 
