@@ -58,7 +58,12 @@ The input images from the camera feed are fed into these models, which then outp
 
 Below is an architecture diagram of how this project will be used in practice.
 
-![Architecture Diagram](architecture.png)
+![Real World Architecture Diagram](architecture.png)
+
+Below is an architecture diagram of how the high-level software pieces interact in this project.
+
+![Software Architecture Diagram](architecture_software.png)
+
 
 ## Usage Examples
 
